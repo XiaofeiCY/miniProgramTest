@@ -1,0 +1,7 @@
+var getText = function (aaa, event, ownerInstance) {
+  console.log('打印wxs的自带参数值', event, ownerInstance);
+  return aaa+=1;
+}
+module.exports = {
+  getText: getText
+}
