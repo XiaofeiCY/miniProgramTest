@@ -1,0 +1,6 @@
+<template name='model1'>
+  <view class="tempClass">这里是demo1，我要长高！---{{model}}</view>
+</template>
+<template name='model2'>
+  <view class="tempClass">这里是demo2，我要发财！---{{model}}</view>
+</template>

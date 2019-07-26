@@ -1,0 +1,4 @@
+.tempClass {
+  font-size: 20px;
+  color: #ffc72a;
+}

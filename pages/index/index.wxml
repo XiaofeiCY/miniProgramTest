@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<wxs src="./test.wxs" module="util" />
+<wxs src="./test.wxs" module="testWXS" />
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -13,7 +13,7 @@
   <text>这里纬度：{{longitude}}</text>
   <map longitude="{{longitude}}" latitude="{{latitude}}" show-location></map>
   <button bindtap='getLocation'>获取定位</button>
-  <text>这里测试wxs：{{util.getText(testWxs)}}</text>
+  <text>这里测试wxs：{{testWXS.getText(testWxs)}}</text>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

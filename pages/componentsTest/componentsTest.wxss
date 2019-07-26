@@ -1,4 +1,65 @@
+ @import "./template/templateTest.wxss";
  page {
+   width: 100%;
+   height: 100%;
+ }
+ .commonView {
+   padding: 10px;
+   background-color: #bdc3c7;
+   margin-bottom: 25px;
+ }
+ movable-area {
+   width: 100%;
+   height: 100px;
+   background-color: #6dd5ed;
+ }
+ movable-view {
+   width: 50px;
+   height: 50px;
+   background-color: #ee9ca7;
+   text-align: center;
+   line-height: 50px;
+ }
+ video {
+   width: 100%;
+ }
+ cover-view {
+   color: #fff;
+   white-space: pre-wrap;
+ }
+ scroll-view {
+   background-color: #f64f59;
+   white-space: nowrap;
+   display: flex;
+   margin-bottom: 10px;
+ }
+ .scrollView1 {
+   height: 120px;
+ }
+ .scrollView2 {
+   height: 300px;
+ }
+ .scrollDemo1 {
+   width: 150px;
+   height: 100px;
+   border-right: 1px solid slateblue;
+   background-color: #c471ed;
+   /* float: left; */
+   display: inline-flex;
+ }
+ .scrollDemo2 {
+   width: 100px;
+   height: 150px;
+   border-bottom: 1px solid slateblue;
+   background-color: #71ede7;
+   /* float: left; */
+   /* display: inline-flex; */
+ }
+ swiper {
+   width: 100%;
+   height: 250px;
+ }
+ .slide-image {
    width: 100%;
    height: 100%;
  }

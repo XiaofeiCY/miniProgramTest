@@ -4,7 +4,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    templateList: [{
+      index: 1,
+      model: '第一个数据'
+    }, {
+      index: 2,
+      model: '第二个数据'
+    }, {
+      index: 3,
+      model: '第三个数据'
+    }],
+    imgUrls: [
+      "../../static/imgs/demo1.jpg",
+      "../../static/imgs/demo2.jpg",
+      "../../static/imgs/demo3.jpg"
+    ]
   },
 
   /**
@@ -61,5 +75,9 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  bindchange(event) {
+    // 通过判断event.detail.source的不同，从而进行不同的操作（source：1、autoplay  2、touch）
+    // console.log('~~~~', event);
   }
 })

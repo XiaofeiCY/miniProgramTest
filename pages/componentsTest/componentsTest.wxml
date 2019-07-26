@@ -1,3 +1,50 @@
+<import src='./template/templateTest.wxml' />
 <view>
-  这里测试组件
+  <text>1、测试“模板template”</text>
+  <view class="commonView">
+    <block wx:for="{{templateList}}" wx:key='item.index'>
+      <template is="{{item.index % 2 === 0 ? 'model1' : 'model2'}}"  data="{{...item}}"/>
+    </block>
+  </view>
+  <text>2、测试滑动</text>
+  <view class="commonView">
+    <movable-area>
+      <movable-view direction='horizontal' out-of-bounds='true'>滑块</movable-view>
+    </movable-area>
+  </view>
+  <text>3、测试cover-view</text>
+  <view class="commonView">
+    <video src="../../static/imgs/peopleTeco.mov">
+      <view>当有一些需要展示在视频之上的内容的时候（比如自定义播放按钮） 可以用这个展示（比绝对定位要方便,但注意cover-view里面的内容不会换行，得用white-space）</view>
+    </video>
+  </view>
+  <text>4、测试滚动</text>
+  <view class="commonView">
+    <scroll-view scroll-x class="scrollView1">
+      <view class="scrollDemo1">横向</view>
+      <view class="scrollDemo1">横向</view>
+      <view class="scrollDemo1">横向</view>
+      <view class="scrollDemo1">横向</view>
+    </scroll-view>
+    <scroll-view scroll-y class="scrollView2">
+      <view class="scrollDemo2">纵向</view>
+      <view class="scrollDemo2">纵向</view>
+      <view class="scrollDemo2">纵向</view>
+      <view class="scrollDemo2">纵向</view>
+    </scroll-view>
+  </view>
+  <text>5、测试轮播</text>
+  <view class="commonView">
+    <swiper indicator-dots autoplay circular bindchange="bindchange">
+      <block wx:for="{{imgUrls}}" wx:key="item">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <text>6、进度条</text>
+  <view class="commonView">
+    <progress percent="20" show-info />
+  </view>
 </view>
