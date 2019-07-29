@@ -4,6 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inpStr: 'aaa',
+    richList: [{
+      chainName: 'abaab'
+    }, {
+      chainName: 'aaabc'
+    }, {
+      chainName: 'cabbaaac'
+    }],
     templateList: [{
       index: 1,
       model: '第一个数据'

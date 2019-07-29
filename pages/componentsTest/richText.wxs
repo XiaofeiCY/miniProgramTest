@@ -1,0 +1,10 @@
+var filter = function(totalSrt, choosedStr) {
+  if (typeof totalSrt === 'string' && typeof choosedStr === 'string' && totalSrt && choosedStr) {
+    var reg = getRegExp(choosedStr, "g"); // g:全局搜索
+    return totalSrt.replace(reg, '<span class="search_active">' + choosedStr + '</span>'); // 将排查到的值——reg替换成想要的展现形式
+  }
+  return totalSrt;
+}
+module.exports = {
+  filterTxt: filter
+};
