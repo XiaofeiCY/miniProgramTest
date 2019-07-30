@@ -2,5 +2,9 @@
   "navigationBarBackgroundColor": "#ffc72a",
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "组件测试",
-  "backgroundColor": "#ffc72a"
+  "backgroundColor": "#ffc72a",
+  "usingComponents": {
+    "componentDemo": "./components/components",
+    "selectableA": "./components/selectableA"
+  }
 }

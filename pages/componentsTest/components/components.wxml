@@ -1,0 +1,22 @@
+
+<components>
+  <view>
+  <!-- 注意：在添加多个slot的时候，js文件一定要加上
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  } -->
+    <slot name="aaa"></slot>
+    <view class="slotTest2">{{myProperty}}</view>
+    <view class="slotTest2">{{behaviorTest}}</view>
+    <view class="slotTest">
+      这句话其实是放在子组件里面的
+    </view>
+    <slot name="bbb"></slot>
+    <view class="slotTest">
+      然后这句话不知道写啥，但依然是在子组件里面
+    </view>
+    <slot name="ccc"></slot>
+    <button bindtap="triggerEventTest">点这个按钮触发子组件传值给父组件</button>
+    <button bindtap="myBehaviorMethod">测试一下behavior</button>
+  </view>
+</components>

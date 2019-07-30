@@ -87,5 +87,11 @@ Page({
   bindchange(event) {
     // 通过判断event.detail.source的不同，从而进行不同的操作（source：1、autoplay  2、touch）
     // console.log('~~~~', event);
+  },
+  loginSuccess(e) {
+    console.log('&&^^&&&&&&&', e);
+  },
+  onMyEvent(e) {
+    console.log('子组件触发打印', e);
   }
 })

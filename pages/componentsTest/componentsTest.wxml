@@ -55,4 +55,22 @@
       <rich-text nodes='{{richTextWXS.filterTxt(item.chainName, inpStr)}}'></rich-text>
     </block>
   </view>
+  <text>8、自定义组件</text>
+  <view class="commonView">
+    <componentDemo myProperty='父组件给的值' bindeventTest="onMyEvent" behaviorTest="测试传给behavior,但子组件可以直接引用">
+      <view slot="aaa">这句话是放在父组件的，然后我想把这句话给放在子组件开头</view>
+      <view slot="bbb">这句话是放在父组件的，然后我想把这句话给放在子组件中间</view>
+      <view slot="ccc">这句话是放在父组件的，然后我想把这句话给放在子组件结尾</view>
+    </componentDemo>
+  </view>
+  <text>9、抽象节点</text>
+  <view class="commonView">
+    <selectable ></selectable>
+  </view>
+  <!-- <text>8、导航跳转functional-page-navigator</text>
+  <view class="commonView">
+    <functional-page-navigator name="loginAndGetUserInfo" bind:success="loginSuccess">
+      <button>登录到插件</button>
+    </functional-page-navigator>
+  </view> -->
 </view>

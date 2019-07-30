@@ -1,0 +1,6 @@
+.slotTest {
+  color: red;
+}
+.slotTest2 {
+  color: green;
+}
