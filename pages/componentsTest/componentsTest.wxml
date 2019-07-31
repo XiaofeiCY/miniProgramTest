@@ -50,14 +50,14 @@
   </view>
   <text>7、测试富文本rich-text</text>
   <view class="commonView">
-  <text>这里测试一下wxs+rich-text实现搜索高亮功能</text>
+    <text>这里测试一下wxs+rich-text实现搜索高亮功能</text>
     <block wx:for='{{richList}}' wx:key='index'>
       <rich-text nodes='{{richTextWXS.filterTxt(item.chainName, inpStr)}}'></rich-text>
     </block>
   </view>
   <text>8、自定义组件</text>
   <view class="commonView">
-    <componentDemo myProperty='父组件给的值' bindeventTest="onMyEvent" behaviorTest="测试传给behavior,但子组件可以直接引用">
+    <componentDemo my-property='这句话是父组件给的值——“父组件传值要用连字符写法，子组件接收用驼峰写法”' bindeventTest="onMyEvent" behavior-test="测试传给behavior,但子组件可以直接引用">
       <view slot="aaa">这句话是放在父组件的，然后我想把这句话给放在子组件开头</view>
       <view slot="bbb">这句话是放在父组件的，然后我想把这句话给放在子组件中间</view>
       <view slot="ccc">这句话是放在父组件的，然后我想把这句话给放在子组件结尾</view>
@@ -65,12 +65,10 @@
   </view>
   <text>9、抽象节点</text>
   <view class="commonView">
-    <selectable ></selectable>
+    <text class="warning">未成功解决FUCK!!!</text>
+    <!-- <text>引入第一个组件</text>
+    <selectableA generic:selectable="selectableB" />
+    <text>引入第二个组件</text>
+    <selectableA generic:selectable="selectableC" /> -->
   </view>
-  <!-- <text>8、导航跳转functional-page-navigator</text>
-  <view class="commonView">
-    <functional-page-navigator name="loginAndGetUserInfo" bind:success="loginSuccess">
-      <button>登录到插件</button>
-    </functional-page-navigator>
-  </view> -->
 </view>

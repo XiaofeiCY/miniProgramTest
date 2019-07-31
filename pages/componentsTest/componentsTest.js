@@ -93,5 +93,14 @@ Page({
   },
   onMyEvent(e) {
     console.log('子组件触发打印', e);
+  },
+  getBtnInfo() {
+    var data = wx.getMenuButtonBoundingClientRect();
+    console.log('菜单按键宽度：', data.width);
+    console.log('菜单按键高度：', data.height);
+    console.log('菜单按键上边界坐标：', data.top);
+    console.log('菜单按键右边界坐标：', data.right);
+    console.log('菜单按键下边界坐标：', data.bottom);
+    console.log('菜单按键左边界坐标：', data.left);
   }
 })

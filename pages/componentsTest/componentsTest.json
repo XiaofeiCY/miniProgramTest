@@ -5,6 +5,8 @@
   "backgroundColor": "#ffc72a",
   "usingComponents": {
     "componentDemo": "./components/components",
-    "selectableA": "./components/selectableA"
+    "selectableA": "./components/selectableA",
+    "selectableB": "./components/selectableB",
+    "selectableC": "./components/selectableC"
   }
 }

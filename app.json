@@ -1,14 +1,15 @@
 {
   "pages": [
+    "pages/logs/logs",
     "pages/componentsTest/componentsTest",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "小程序测试",
     "backgroundColor": "#428675",
+    "navigationStyle": "custom",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
