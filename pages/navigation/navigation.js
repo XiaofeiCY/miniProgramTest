@@ -13,5 +13,12 @@ Component({
     defineSelfBTNTop: app.globalData.Custom.top,
     defineSelfBTNLeft: app.globalData.defineSelfBTNLeft,
     titleTop: app.globalData.titleTop
+  },
+  methods: {
+    backToLast() {
+      wx.navigateBack({
+        delta: 1
+      })
+    }
   }
 })

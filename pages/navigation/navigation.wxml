@@ -1,16 +1,14 @@
 <view class='nav-custom' style='height:{{CustomBarHeight}}px'>
-  <view class="defineSelfBTN" style='height:{{defineSelfBTNHeight}}px;width:{{defineSelfBTNWidth}}px;top:{{defineSelfBTNTop}}px;left:{{defineSelfBTNLeft}}px'>
-    <view class="menuItem">
-    <navigator>
+    <view class="defineSelfBTN" style='height:{{defineSelfBTNHeight}}px;width:{{defineSelfBTNWidth}}px;top:{{defineSelfBTNTop}}px;left:{{defineSelfBTNLeft}}px'>
+      <view class="menuItem" bindtap="backToLast">
         <image src="../../static/imgs/back.png"></image>
-      </navigator>
+      </view>
+      <view class="menuItem">
+      <!-- 导航的路径不能是底部tab栏的页面 -->
+        <navigator url='../index/index'>
+          <image src="../../static/imgs/home.png"></image>
+        </navigator>
+      </view>
     </view>
-    <view class="menuItem">
-    <!-- 导航的路径不能是底部tab栏的页面 -->
-      <navigator url='../componentsTest/components/selectableB'>
-        <image src="../../static/imgs/home.png"></image>
-      </navigator>
-    </view>
+    <text class="titleName" style='top:{{titleTop}}px'>{{NavTitle}}</text>
   </view>
-  <text class="titleName" style='top:{{titleTop}}px'>{{NavTitle}}</text>
-</view>

@@ -4,6 +4,7 @@
   "navigationBarTitleText": "组件测试",
   "backgroundColor": "#ffc72a",
   "usingComponents": {
+    "navigation": "../navigation/navigation",
     "componentDemo": "./components/components",
     "selectableA": "./components/selectableA",
     "selectableB": "./components/selectableB",

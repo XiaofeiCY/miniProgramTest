@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/logs/logs",
-    "pages/componentsTest/componentsTest",
-    "pages/index/index"
+    "pages/componentsTest/componentsTest"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,19 +12,6 @@
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
-  },
-  "tabBar": {
-    "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志"
-    }, {
-      "pagePath": "pages/componentsTest/componentsTest",
-      "text": "组件"
-    }]
   },
   "permission": {
     "scope.userLocation": {

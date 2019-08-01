@@ -1,3 +1,6 @@
+const api = require('../../webapi/apiRequest.js');
+const app = getApp()
+
 Page({
 
   /**
@@ -22,6 +25,7 @@ Page({
       index: 3,
       model: '第三个数据'
     }],
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     imgUrls: [
       "../../static/imgs/demo1.jpg",
       "../../static/imgs/demo2.jpg",
@@ -32,8 +36,25 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function () {
+    // 如果需求提到请求API之前必须先登录
+    // 先判断当前的登录状态
+    // 如果登录未过期，则正常继续后面的操作
+    // 如果过期，则跳转到带有登录授权按钮的页面（通过wx.navigateTo跳转）
+    wx.checkSession({
+      success: res => {
+        console.log('登录未过期', res);
+        wx.showToast({
+          title: '登录未过期啊',
+        });
+      },
+      fail: res => {
+        console.log('登录已经过期', res);
+        wx.showToast({
+          title: '登录已经过期',
+        });
+      }
+    });
   },
 
   /**
@@ -102,5 +123,37 @@ Page({
     console.log('菜单按键右边界坐标：', data.right);
     console.log('菜单按键下边界坐标：', data.bottom);
     console.log('菜单按键左边界坐标：', data.left);
+  },
+  // 使用登录API
+  userLogin() {
+    const params = {
+      userName: 'aaa',
+      passWord: 'bbb'
+    };
+    api.login(params).then(res => {
+      console.log(res); // API返回的数据
+      // 业务处理
+    });
+  },
+  // 测试操作请求之前判断是否需要验证登录
+  testLogin(e) {
+    if (app.globalData.userInfo) {
+      wx.showModal({
+        title: '成功啦',
+        content: '现在是登录状态哦',
+        showCancel: false, // 不要显示确定
+        confirmText: 'OJBK', // 自定义确定文字
+        confirmColor: '#ee9ca7', // 自定义确定文字颜色
+        success(res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      });
+    } else {
+      app.globalData.userInfo = e.detail.userInfo
+    }
   }
 })

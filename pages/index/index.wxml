@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <wxs src="./test.wxs" module="testWXS" />
+<navigation Nav-title="首页" class="bannerStyle"></navigation>
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -15,6 +16,9 @@
   <button bindtap='getLocation'>获取定位</button>
   <text>这里测试wxs：{{testWXS.getText(testWxs)}}</text>
   </view>
+  <navigator url='../logs/logs'>
+    <button>点击跳转到日志页面</button>
+  </navigator>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

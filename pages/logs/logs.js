@@ -1,9 +1,11 @@
 //logs.js
 const util = require('../../utils/util.js')
+const app = getApp()
 
 Page({
   data: {
-    logs: []
+    logs: [],
+    marginTop: app.globalData.Custom.height
   },
   onLoad: function () {
     // console.log('日志打印');

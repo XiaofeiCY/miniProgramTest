@@ -1,5 +1,7 @@
 <import src='./template/templateTest.wxml' />
 <wxs src="./richText.wxs" module="richTextWXS" />
+<navigation Nav-title="组件测试"></navigation>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="testLogin">测试登录按钮</button> -->
 <view>
   <text>1、测试“模板template”</text>
   <view class="commonView">
