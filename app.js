@@ -8,6 +8,11 @@ App({
     wx.setStorageSync('logs', logs)
     // console.log('展示本地存储能力', logs);
 
+    //隐藏系统tabbar
+    wx.hideTabBar(); // app.json里面必须要配置tabBar，不然会捕获不到tabBar，后面的内容也会跟着无效
+    //获取设备信息
+    this.getSystemInfo();
+
     // 登录
     wx.login({
       success: res => {
@@ -67,6 +72,34 @@ App({
   onError(msg) {
     // console.log('这里是全局onError', msg);
   },
+  getSystemInfo: function () {
+    let t = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        t.globalData.systemInfo = res;
+      }
+    });
+  },
+  editTabbar: function () {
+    let tabbar = this.globalData.tabBar;
+    let currentPages = getCurrentPages();
+    let _this = currentPages[currentPages.length - 1];
+    let pagePath = _this.route;
+
+    (pagePath.indexOf('/') != 0) && (pagePath = '/' + pagePath);  // 这句话就理解为下面注释的if语句
+
+    // if(pagePath.indexOf('/') != 0){
+    //   pagePath = '/' + pagePath;
+    // } 
+
+    for (let i in tabbar.list) {
+      tabbar.list[i].selected = false;
+      (tabbar.list[i].pagePath == pagePath) && (tabbar.list[i].selected = true);
+    }
+    _this.setData({
+      tabbar: tabbar
+    });
+  },
   globalData: {
     userInfo: null,
     statusBarHeight: null,
@@ -74,6 +107,32 @@ App({
     CustomBarHeight: null,
     defineSelfBTNLeft: null,
     titleHeight: null,
-    otherInfo: 'aaa'
+    otherInfo: 'aaa',
+    systemInfo: null,//客户端设备信息
+    tabBar: {
+      "backgroundColor": "#ffffff",
+      "color": "#979795",
+      "selectedColor": "#1c1c1b",
+      "list": [
+        {
+          "pagePath": "/pages/componentsTest/componentsTest",
+          "iconPath": "icon/icon_home.png",
+          "selectedIconPath": "icon/icon_home_HL.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "/pages/middle/middle",
+          "iconPath": "icon/icon_release.png",
+          "isSpecial": true,
+          "text": "发布"
+        },
+        {
+          "pagePath": "/pages/componentsTest/componentsTest",
+          "iconPath": "icon/icon_mine.png",
+          "selectedIconPath": "icon/icon_mine_HL.png",
+          "text": "我的"
+        }
+      ]
+    }
   }
 })

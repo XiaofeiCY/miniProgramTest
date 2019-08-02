@@ -1,9 +1,9 @@
 <!--logs.wxml-->
-<navigation Nav-title="日志"></navigation>
+<navigation Nav-title="日志" class="bannerStyle"></navigation>
+<view class="container log-list"  style="margin-top:{{marginTop}}px">
   <navigator url='../componentsTest/componentsTest'>
-    <button>点击跳转到组件页面</button>
-  </navigator>
-<view class="container log-list" >
+      <button>点击跳转到组件页面</button>
+    </navigator>
   <block wx:for="{{logs}}" wx:for-item="log" wx:key="index">
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>

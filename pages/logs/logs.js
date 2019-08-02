@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     logs: [],
-    marginTop: app.globalData.Custom.height
+    marginTop: app.globalData.CustomBarHeight
   },
   onLoad: function () {
     // console.log('日志打印');

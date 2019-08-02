@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    tabbar: {},
     motto: 'Hello World',
     testWxs: 1,
     userInfo: {},
@@ -19,6 +20,8 @@ Page({
     })
   },
   onLoad: function () {
+    app.editTabbar(); // tabbar加载的时候判断是否为当前页面
+
     this.getLocation();
     if (app.globalData.userInfo) {
       this.setData({

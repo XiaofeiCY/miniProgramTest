@@ -30,7 +30,8 @@ Page({
       "../../static/imgs/demo1.jpg",
       "../../static/imgs/demo2.jpg",
       "../../static/imgs/demo3.jpg"
-    ]
+    ],
+    marginTop: app.globalData.CustomBarHeight
   },
 
   /**

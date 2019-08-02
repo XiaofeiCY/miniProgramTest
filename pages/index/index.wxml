@@ -19,7 +19,8 @@
   <navigator url='../logs/logs'>
     <button>点击跳转到日志页面</button>
   </navigator>
-  <view class="usermotto">
+   <tabbar tabbar="{{tabbar}}"></tabbar> 
+  <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
+  </view> -->
 </view>

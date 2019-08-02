@@ -13,6 +13,25 @@
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#979795",
+    "selectedColor": "#1c1c1b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/tabbarComponent/icon/icon_home.png",
+        "selectedIconPath": "pages/tabbarComponent/icon/icon_home_HL.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "pages/tabbarComponent/icon/icon_mine.png",
+        "selectedIconPath": "pages/tabbarComponent/icon/icon_mine_HL.png"
+      }
+    ]
+  },
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"

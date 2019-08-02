@@ -1,3 +1,6 @@
+
+<!-- 引用自定义顶部导航栏页面最好不要带下拉刷新（官方没解决好） -->
+
 <view class='nav-custom' style='height:{{CustomBarHeight}}px'>
     <view class="defineSelfBTN" style='height:{{defineSelfBTNHeight}}px;width:{{defineSelfBTNWidth}}px;top:{{defineSelfBTNTop}}px;left:{{defineSelfBTNLeft}}px'>
       <view class="menuItem" bindtap="backToLast">
