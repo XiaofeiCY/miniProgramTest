@@ -8,6 +8,7 @@
     "componentDemo": "./components/components",
     "selectableA": "./components/selectableA",
     "selectableB": "./components/selectableB",
-    "selectableC": "./components/selectableC"
+    "selectableC": "./components/selectableC",
+    "tabbar": "../tabbarComponent/tabbar"
   }
 }

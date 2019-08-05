@@ -16,11 +16,8 @@
   <button bindtap='getLocation'>获取定位</button>
   <text>这里测试wxs：{{testWXS.getText(testWxs)}}</text>
   </view>
-  <navigator url='../logs/logs'>
+  <navigator url='../logs/logs' open-type="switchTab">
     <button>点击跳转到日志页面</button>
   </navigator>
    <tabbar tabbar="{{tabbar}}"></tabbar> 
-  <!-- <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
 </view>

@@ -13,22 +13,22 @@ Component({
         "selectedColor": "#1c1c1b",
         "list": [
           {
-            "pagePath": "pages/index/index",
+            "pagePath": "/pages/index/index",
             "iconPath": "icon/icon_home.png",
             "selectedIconPath": "icon/icon_home_HL.png",
             "text": "首页"
           },
           {
-            "pagePath": "pages/middle/middle",
+            "pagePath": "/pages/componentsTest/componentsTest",
             "iconPath": "icon/icon_release.png",
             "isSpecial": true,
-            "text": "发布"
+            "text": "组件"
           },
           {
-            "pagePath": "pages/mine/mine",
+            "pagePath": "/pages/logs/logs",
             "iconPath": "icon/icon_mine.png",
             "selectedIconPath": "icon/icon_mine_HL.png",
-            "text": "我的"
+            "text": "日志"
           }
         ]
       }
@@ -41,7 +41,14 @@ Component({
   data: {
     isIphoneX: app.globalData.systemInfo.model == "iPhone X" ? true : false,
   },
-
+  lifetimes: {
+    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+    attached: function () { 
+      // console.log('这里打印刚进入节点前--------------', this.properties.tabbar);
+    },
+    moved: function () { },
+    detached: function () { },
+  },
   /**
    * 组件的方法列表
    */

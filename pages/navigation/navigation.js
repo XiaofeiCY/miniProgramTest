@@ -16,9 +16,9 @@ Component({
   },
   methods: {
     backToLast() {
-      wx.navigateBack({
-        delta: 1
-      })
+      // wx.navigateBack({
+      //   delta: 1
+      // })
     }
   }
 })

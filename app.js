@@ -9,7 +9,8 @@ App({
     // console.log('展示本地存储能力', logs);
 
     //隐藏系统tabbar
-    wx.hideTabBar(); // app.json里面必须要配置tabBar，不然会捕获不到tabBar，后面的内容也会跟着无效
+    wx.hideTabBar();
+
     //获取设备信息
     this.getSystemInfo();
 
@@ -115,22 +116,22 @@ App({
       "selectedColor": "#1c1c1b",
       "list": [
         {
-          "pagePath": "/pages/componentsTest/componentsTest",
+          "pagePath": "/pages/index/index",
           "iconPath": "icon/icon_home.png",
           "selectedIconPath": "icon/icon_home_HL.png",
           "text": "首页"
         },
         {
-          "pagePath": "/pages/middle/middle",
+          "pagePath": "/pages/componentsTest/componentsTest",
           "iconPath": "icon/icon_release.png",
           "isSpecial": true,
-          "text": "发布"
+          "text": "组件"
         },
         {
-          "pagePath": "/pages/componentsTest/componentsTest",
+          "pagePath": "/pages/logs/logs",
           "iconPath": "icon/icon_mine.png",
           "selectedIconPath": "icon/icon_mine_HL.png",
-          "text": "我的"
+          "text": "日志"
         }
       ]
     }

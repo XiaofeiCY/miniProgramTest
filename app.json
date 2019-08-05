@@ -26,7 +26,7 @@
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "我的",
+        "text": "日志",
         "iconPath": "pages/tabbarComponent/icon/icon_mine.png",
         "selectedIconPath": "pages/tabbarComponent/icon/icon_mine_HL.png"
       }

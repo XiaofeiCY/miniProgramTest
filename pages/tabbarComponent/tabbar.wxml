@@ -6,6 +6,10 @@
       <text>{{item.text}}</text>
     </navigator>
     <navigator wx:else class="tabbar_nav" hover-class="none" url="{{item.pagePath}}" style="color:{{item.selected ? tabbar.selectedColor : tabbar.color}}" open-type="switchTab">
+      <!-- 
+        为了解决切换页面时，底部tabbar不会出现闪屏情况，这里的open-type只能是switchTab，
+        当open-type是switchTab的时候，app.json必须配置tabbar，不然不起作用
+       -->
       <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image>
       <text>{{item.text}}</text>
     </navigator>

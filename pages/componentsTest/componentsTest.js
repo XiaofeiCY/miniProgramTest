@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tabbar: {},
     inpStr: 'aaa',
     richList: [{
       chainName: 'abaab'
@@ -38,6 +39,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    app.editTabbar(); // tabbar加载的时候判断是否为当前页面
+
     // 如果需求提到请求API之前必须先登录
     // 先判断当前的登录状态
     // 如果登录未过期，则正常继续后面的操作

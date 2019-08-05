@@ -7,8 +7,8 @@
         <image src="../../static/imgs/back.png"></image>
       </view>
       <view class="menuItem">
-      <!-- 导航的路径不能是底部tab栏的页面 -->
-        <navigator url='../index/index'>
+      <!-- 导航的路径如果是底部tab栏的页面 要加上open-type="switchTab"详情见navigation的open-type -->
+        <navigator url='../index/index' open-type="switchTab">
           <image src="../../static/imgs/home.png"></image>
         </navigator>
       </view>
